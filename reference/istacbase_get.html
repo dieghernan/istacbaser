@@ -154,7 +154,197 @@ Normally gived by the <code><a href='istacbase_search.html'>istacbase_search</a>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Percentiles de renta disponible (aÃ±o anterior al de la entrevista) por hogar en Canarias y aÃ±os.</span>
 <span class='fu'>istacbase_get</span><span class='op'>(</span><span class='st'>"soc.cal.enc.res.3637"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='warning'>Warning: URL 'http://www.gobiernodecanarias.org/istac/jaxi-istac/tabla.do?accion=jsonMtd&amp;uuidConsulta=0ddf5c4e-b387-467a-83b3-0571521008c2': Timeout of 60 seconds was reached</span></div><div class='output co'>#&gt; <span class='error'>Error in file(con, "r"): cannot open the connection to 'http://www.gobiernodecanarias.org/istac/jaxi-istac/tabla.do?accion=jsonMtd&amp;uuidConsulta=0ddf5c4e-b387-467a-83b3-0571521008c2'</span></div></pre>
+</div><div class='output co'>#&gt; $datos_lista
+#&gt; $datos_lista$uuid
+#&gt; [1] "0ddf5c4e-b387-467a-83b3-0571521008c2"
+#&gt; 
+#&gt; $datos_lista$title
+#&gt; [1] "Percentiles de renta disponible (año anterior al de la entrevista) por hogar en Canarias y años."
+#&gt; 
+#&gt; $datos_lista$uriPx
+#&gt; [1] "urn:uuid:6513ef36-3157-4f8e-9a1c-6b3d28c06990"
+#&gt; 
+#&gt; $datos_lista$stub
+#&gt; [1] "Años"           "Tipos de renta"
+#&gt; 
+#&gt; $datos_lista$heading
+#&gt; [1] "Indicadores"
+#&gt; 
+#&gt; $datos_lista$categories
+#&gt;         variable                                    codes
+#&gt; 1           Años 2019, 2018, 2017, 2016, 2015, 2014, 2013
+#&gt; 2 Tipos de renta                                     A, B
+#&gt; 3    Indicadores                            A, B, C, D, E
+#&gt;                                                                           labels
+#&gt; 1                                       2019, 2018, 2017, 2016, 2015, 2014, 2013
+#&gt; 2                       Renta disponible, Renta disponible con alquiler imputado
+#&gt; 3 Percentil 10, Percentil 25, Percentil 50 (Mediana), Percentil 75, Percentil 90
+#&gt; 
+#&gt; $datos_lista$temporals
+#&gt; [1] "Años"
+#&gt; 
+#&gt; $datos_lista$notes
+#&gt; [1] "Los datos de renta son referidos al año anterior al de la encuesta.#Percentil 10: Es el valor de la renta que deja por debajo un 10% de la población.#Percentil 25: Es el valor de la renta que deja por debajo un 25% de la población.#Percentil 50: Es el valor de la renta que deja por debajo un 50% de la población. Coincide con el valor de la mediana#Percentil 75: Es el valor de la renta que deja por debajo un 75% de la población.#Percentil 90: Es el valor de la renta que deja por debajo un 90% de la población.##"
+#&gt; 
+#&gt; $datos_lista$source
+#&gt; [1] "Instituto Canario de Estadística (ISTAC) a partir de datos del Instituto Nacional de Estadística (INE)."
+#&gt; 
+#&gt; $datos_lista$surveyCode
+#&gt; [1] "E30453A"
+#&gt; 
+#&gt; $datos_lista$surveyTitle
+#&gt; [1] "Encuesta de Condiciones de Vida"
+#&gt; 
+#&gt; $datos_lista$publishers
+#&gt; [1] "Instituto Canario de Estadística (ISTAC)"
+#&gt; 
+#&gt; $datos_lista$data
+#&gt;       Valor   dimCodes
+#&gt; 1   7100.10 2019, A, A
+#&gt; 2  11461.21 2019, A, B
+#&gt; 3  19988.80 2019, A, C
+#&gt; 4  32779.40 2019, A, D
+#&gt; 5  48602.60 2019, A, E
+#&gt; 6  10984.60 2019, B, A
+#&gt; 7  16428.50 2019, B, B
+#&gt; 8  25321.90 2019, B, C
+#&gt; 9  37130.20 2019, B, D
+#&gt; 10 54080.00 2019, B, E
+#&gt; 11  5304.40 2018, A, A
+#&gt; 12  9043.20 2018, A, B
+#&gt; 13 18734.50 2018, A, C
+#&gt; 14 31457.20 2018, A, D
+#&gt; 15 46992.50 2018, A, E
+#&gt; 16  8329.93 2018, B, A
+#&gt; 17 13908.81 2018, B, B
+#&gt; 18 24522.10 2018, B, C
+#&gt; 19 36511.18 2018, B, D
+#&gt; 20 52140.40 2018, B, E
+#&gt; 21  5163.20 2017, A, A
+#&gt; 22 11271.10 2017, A, B
+#&gt; 23 20104.70 2017, A, C
+#&gt; 24 30469.84 2017, A, D
+#&gt; 25 43528.40 2017, A, E
+#&gt; 26  9584.35 2017, B, A
+#&gt; 27 15335.08 2017, B, B
+#&gt; 28 23940.14 2017, B, C
+#&gt; 29 35138.32 2017, B, D
+#&gt; 30 49161.55 2017, B, E
+#&gt; 31  4936.70 2016, A, A
+#&gt; 32  9521.01 2016, A, B
+#&gt; 33 18421.26 2016, A, C
+#&gt; 34 28655.00 2016, A, D
+#&gt; 35 44359.00 2016, A, E
+#&gt; 36  7500.08 2016, B, A
+#&gt; 37 13747.60 2016, B, B
+#&gt; 38 22262.58 2016, B, C
+#&gt; 39 33645.69 2016, B, D
+#&gt; 40 50198.99 2016, B, E
+#&gt; 41  4797.24 2015, A, A
+#&gt; 42  9131.60 2015, A, B
+#&gt; 43 19187.06 2015, A, C
+#&gt; 44 30704.30 2015, A, D
+#&gt; 45 46706.69 2015, A, E
+#&gt; 46  6697.36 2015, B, A
+#&gt; 47 13184.90 2015, B, B
+#&gt; 48 23389.25 2015, B, C
+#&gt; 49 34634.42 2015, B, D
+#&gt; 50 51111.72 2015, B, E
+#&gt; 51  4635.40 2014, A, A
+#&gt; 52 10671.50 2014, A, B
+#&gt; 53 17748.00 2014, A, C
+#&gt; 54 29841.60 2014, A, D
+#&gt; 55 43231.20 2014, A, E
+#&gt; 56  9108.76 2014, B, A
+#&gt; 57 13785.16 2014, B, B
+#&gt; 58 21629.97 2014, B, C
+#&gt; 59 33739.82 2014, B, D
+#&gt; 60 47892.11 2014, B, E
+#&gt; 61  6240.40 2013, A, A
+#&gt; 62 10965.17 2013, A, B
+#&gt; 63 19707.30 2013, A, C
+#&gt; 64 29712.25 2013, A, D
+#&gt; 65 41936.60 2013, A, E
+#&gt; 66  8856.35 2013, B, A
+#&gt; 67 14399.64 2013, B, B
+#&gt; 68 23402.68 2013, B, C
+#&gt; 69 33254.26 2013, B, D
+#&gt; 70 46245.96 2013, B, E
+#&gt; 
+#&gt; 
+#&gt; $df
+#&gt;    Años Tipos de renta Indicadores    valor
+#&gt; 1  2019              A           A  7100.10
+#&gt; 2  2019              A           B 11461.21
+#&gt; 3  2019              A           C 19988.80
+#&gt; 4  2019              A           D 32779.40
+#&gt; 5  2019              A           E 48602.60
+#&gt; 6  2019              B           A 10984.60
+#&gt; 7  2019              B           B 16428.50
+#&gt; 8  2019              B           C 25321.90
+#&gt; 9  2019              B           D 37130.20
+#&gt; 10 2019              B           E 54080.00
+#&gt; 11 2018              A           A  5304.40
+#&gt; 12 2018              A           B  9043.20
+#&gt; 13 2018              A           C 18734.50
+#&gt; 14 2018              A           D 31457.20
+#&gt; 15 2018              A           E 46992.50
+#&gt; 16 2018              B           A  8329.93
+#&gt; 17 2018              B           B 13908.81
+#&gt; 18 2018              B           C 24522.10
+#&gt; 19 2018              B           D 36511.18
+#&gt; 20 2018              B           E 52140.40
+#&gt; 21 2017              A           A  5163.20
+#&gt; 22 2017              A           B 11271.10
+#&gt; 23 2017              A           C 20104.70
+#&gt; 24 2017              A           D 30469.84
+#&gt; 25 2017              A           E 43528.40
+#&gt; 26 2017              B           A  9584.35
+#&gt; 27 2017              B           B 15335.08
+#&gt; 28 2017              B           C 23940.14
+#&gt; 29 2017              B           D 35138.32
+#&gt; 30 2017              B           E 49161.55
+#&gt; 31 2016              A           A  4936.70
+#&gt; 32 2016              A           B  9521.01
+#&gt; 33 2016              A           C 18421.26
+#&gt; 34 2016              A           D 28655.00
+#&gt; 35 2016              A           E 44359.00
+#&gt; 36 2016              B           A  7500.08
+#&gt; 37 2016              B           B 13747.60
+#&gt; 38 2016              B           C 22262.58
+#&gt; 39 2016              B           D 33645.69
+#&gt; 40 2016              B           E 50198.99
+#&gt; 41 2015              A           A  4797.24
+#&gt; 42 2015              A           B  9131.60
+#&gt; 43 2015              A           C 19187.06
+#&gt; 44 2015              A           D 30704.30
+#&gt; 45 2015              A           E 46706.69
+#&gt; 46 2015              B           A  6697.36
+#&gt; 47 2015              B           B 13184.90
+#&gt; 48 2015              B           C 23389.25
+#&gt; 49 2015              B           D 34634.42
+#&gt; 50 2015              B           E 51111.72
+#&gt; 51 2014              A           A  4635.40
+#&gt; 52 2014              A           B 10671.50
+#&gt; 53 2014              A           C 17748.00
+#&gt; 54 2014              A           D 29841.60
+#&gt; 55 2014              A           E 43231.20
+#&gt; 56 2014              B           A  9108.76
+#&gt; 57 2014              B           B 13785.16
+#&gt; 58 2014              B           C 21629.97
+#&gt; 59 2014              B           D 33739.82
+#&gt; 60 2014              B           E 47892.11
+#&gt; 61 2013              A           A  6240.40
+#&gt; 62 2013              A           B 10965.17
+#&gt; 63 2013              A           C 19707.30
+#&gt; 64 2013              A           D 29712.25
+#&gt; 65 2013              A           E 41936.60
+#&gt; 66 2013              B           A  8856.35
+#&gt; 67 2013              B           B 14399.64
+#&gt; 68 2013              B           C 23402.68
+#&gt; 69 2013              B           D 33254.26
+#&gt; 70 2013              B           E 46245.96
+#&gt; </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
